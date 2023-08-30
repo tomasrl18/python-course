@@ -6,3 +6,6 @@ for number in range(5):
         break
 else:
     print("Not Found")
+
+for char in "Ultimate python":
+    print(char)
