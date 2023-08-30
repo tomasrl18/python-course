@@ -1,24 +1,38 @@
-n1 = 0
+print("Bienvenido a la calculadora")
+print("Para salir escribre salir")
+print("Las operaciones son suma, resta, multi y div")
 
-if n1 == 0:
-    n1 = int(input("Introduzca un número: "))
-    
-    while True:
-        op = input("+, -, /, *: ")
-        n2 = int(input("Introduzca un segundo número: "))
+result = ""
 
-        if op.lower() == "salir":
+while True:
+    if not result:
+        result = input("Ingrese un número: ")
+        
+        if result.lower() == "salir":
             break
+        
+        result = int(result)
 
-        if op == "+":
-            n1 += n2
-            print(n1)
-        elif op == "-":
-            n1 += n2
-            print(n1)
-        elif op == "/":
-            n1 /= n2
-            print(n1)
-        elif op == "*":
-            n1 *= n2
-            print(n1)
+    op = input("Ingresa operación: ")
+    if op.lower() == "salir":
+        break
+    
+    n2 = input("Ingresa siguiente número: ")
+    if n2.lower() == "salir":
+        break
+
+    n2 = int(n2)
+
+    if op.lower() == "suma":
+        result += n2
+    elif op.lower() == "resta":
+        result -= n2
+    elif op.lower() == "div":
+        result /= n2
+    elif op.lower() == "multi":
+        result *= n2
+    else:
+        print("Operación no válida")
+        break
+    
+    print(f"El resultado es {result}")
