@@ -1,6 +1,6 @@
-def hello():
+def hello(name, last_name):
     print("Hello world")
-    print("Ultimate Python")
+    print(f"Welcome {name} {last_name}")
 
 
-hello()
+hello('Tomás', 'Raigal')
