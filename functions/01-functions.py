@@ -1,6 +1,7 @@
-def hello(name, last_name):
+def hello(name, last_name="Raigal"):
     print("Hello world")
     print(f"Welcome {name} {last_name}")
 
 
-hello('Tomás', 'Raigal')
+hello('Tomás')
+hello('Tomás', 'Martínez')
