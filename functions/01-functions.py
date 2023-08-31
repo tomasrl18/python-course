@@ -5,3 +5,5 @@ def hello(name, last_name="Raigal"):
 
 hello('Tomás')
 hello('Tomás', 'Martínez')
+
+hello(last_name="Raigal", name="Tomás")
