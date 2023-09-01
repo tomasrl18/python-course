@@ -1,11 +1,20 @@
-def es_palindrome(text):
-    reversed_text = text[::-1]
-    formatted_text = reversed_text.replace(" ", "").lower()
+def no_space(text):
+    new_text = ""
+    for char in text:
+        if char != " ":
+            new_text += char
+    return new_text
 
-    if(text.lower() == formatted_text):
-        return True
-    
-    return False
+def reverse(text):
+    reversed_text = ""
+    for char in text:
+        reversed_text = char + reversed_text
+    return reversed_text
+
+def es_palindrome(text):
+    text = no_space(text)
+    reversed_text = reverse(text)
+    return text.lower() == reversed_text.lower()
 
 print("Abba", es_palindrome("Abba"))
 print("Reconocer", es_palindrome("Reconocer"))
