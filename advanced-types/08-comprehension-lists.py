@@ -15,5 +15,9 @@ users = [
 #names = [user for user in users if user[1] > 2]
 #print(names)
 
-names = [user[0] for user in users if user[1] > 2]
-print(names)
+#names = [user[0] for user in users if user[1] > 2]
+#print(names)
+
+#names = list(map(lambda user: user[0], users))
+lessUsers = list(filter(lambda user: user[1] > 2, users))
+print(lessUsers)
