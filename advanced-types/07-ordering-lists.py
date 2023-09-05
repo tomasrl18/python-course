@@ -13,8 +13,6 @@ users2.sort()
 print(users)
 print(users2)
 
-def order(element):
-    return element[1]
 
-users2.sort(key=order, reverse=True)
+users2.sort(key=lambda el: el[1])
 print(users2)
